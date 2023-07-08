@@ -9,3 +9,5 @@ const shareBtn = document.getElementById("share-btn")
    shareBtn.src= "images/icon-sharewhite.svg";
   }
  }
+
+ onresize
