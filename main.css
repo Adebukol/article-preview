@@ -32,7 +32,7 @@ body{
   box-sizing: border-box;
   background-color: #fff;
   height: 350px;
-  width: 600px;
+  width: 550px;
   padding: 50px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -66,6 +66,7 @@ body{
   height: 13px;
   background-color: hsl(210, 46%, 95%);
   border-radius: 100%;
+  cursor: pointer;
 }
 .avatar-flex{
   display: flex;
@@ -81,7 +82,7 @@ body{
   justify-content: flex-start;
   align-items: flex-start;
 }
-.show{
+/* .show{
   display: flex;
   background-color: hsl(217, 19%, 35%);
   align-items: center;
@@ -89,13 +90,30 @@ body{
   box-sizing: border-box;
   width: 200px;
   border-radius: 20px;
+  align-self:flex-end; 
+}*/
 
-  /* width: 100px; */
+.wrapper{
+  display: inline-flex;
+  padding: 8px;
+}
+.wrapper .sm-icon{
+  margin: 0 10px;
+  cursor: pointer;
+}
+.wrapper .tooltip{
+  background-color: hsl(217, 19%, 35%);
+  padding: 10px 18px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: lighter;
+  color:hsl(210, 46%, 95%)
 }
 .sm-icon{
   width: 20px;
   height: 20px;
-  margin-right: 30px;
+  /* margin-right: 30px; */
 }
 .attribution { 
   font-size: 11px; 
@@ -114,10 +132,12 @@ body{
   }
   .drawer{
     width: 100%;
+    margin: auto;
   }
   .right{
     width: 100%;
     padding: 30px;
+    margin: auto;
   }
   .heading{
     font-size: 16px;
