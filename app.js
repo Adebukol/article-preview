@@ -1,7 +1,9 @@
 // function showDiv(){
 const shareBtn = document.getElementById("share-btn")
+const mobileShare = document.getElementById("mobileShareBtn");
+console.log(mobileShare);
 
- shareBtn.addEventListener("click",e)     
+    
  function showDiv(){
   if(document.querySelector(".tooltip").style.visibility= "hidden"){
    document.querySelector(".tooltip").style.visibility= "visible"
@@ -10,9 +12,9 @@ const shareBtn = document.getElementById("share-btn")
   }
  }
 
- body.onresize= function(){
-  let shareIcon = document.getElementById("share-btn")
-if(document.querySelector(".second").style.display = "none"){
+ function showMobile(){
+document.querySelector(".container").style.display = "none";
 document.querySelector(".second").style.display ="block"
+
 }
- }
+ 
