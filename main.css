@@ -16,6 +16,7 @@ body{
   font-family: 'Manrope', sans-serif;
 }
 .container{
+  width: 100%;
   display: flex;
   /* margin: 300px auto 300px auto; */
   margin: 200px;
@@ -23,12 +24,15 @@ body{
   
 }
 .drawer{
-  width:400px;
+  width: 100%;
+  max-width: 700px;
   height: 350px;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
 }
 .right{
+  position: absolute;
+  left: 550px;
   box-sizing: border-box;
   background-color: #fff;
   height: 350px;
@@ -107,10 +111,10 @@ z-index: 2;
   padding: 18px 25px;
   display: flex;
   align-items: center;
-  top: 380px;
+  top: 180px;
   font-size: 13px;
   font-weight: lighter;
-  color:hsl(210, 46%, 95%);
+  color:hsl(214, 17%, 51%);
   letter-spacing: 2px;
   border-radius: 10px;
 }
@@ -140,29 +144,46 @@ z-index: 2;
 .attribution a { 
   color: hsl(228, 45%, 44%); 
 }
+.second{
+  display: none;
+}
+.share-btn{
+  visibility: hidden;
+}
 
 @media screen and (max-width: 700px) {
   .container{
+    display: flex;
     flex-direction: column;
-    width:100%;
+    max-width:100%;
     height: 100%;
     margin: 50px 20px 50px 20px;
   }
   .drawer{
-    width: 100%;
+    /* width: 100%; */
     margin: auto;
     border-top-right-radius: 15px;
     border-bottom-left-radius: 0px;
   }
   .right{
+    position: relative;
+    left: 0;
+    bottom: 70px;
+    /* position: absolute;
+    top: 330px;
+    
+    z-index: 1;
+    width: 100%; */
+    /* TRBL */
+    padding: 30px 30px 0px 30px;
     width: 100%;
-    padding: 30px;
-    padding-bottom: 0px;
+    max-width: 700px;
     margin: auto;
     border-top-right-radius: 0px;
     border-bottom-left-radius: 15px;
   }
   .heading{
+    padding: 0px 10px 0px 10px;
     font-size: 16px;
     line-height: 1.5rem;
   }
@@ -170,17 +191,132 @@ z-index: 2;
     margin-right: 0px;
     line-height: 1.2rem;
     font-size: 13px;
+    font-weight: 700;
+    padding: 0px 10px 10px 10px;
   }
   .name{
-    font-size: 14px;
+    font-size: 12px;
   }
   .date{
-      font-size: 13px;
+      font-size: 10px;
     }
-  .avatar-flex{
-    margin-top: 50px;
+  .avatar{
+    align-items: center;
   }
-  .michelle-img{
+  /* .michelle-img{
     display: block;
+  } */
+  .avatar-flex{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
   }
+  .wrapper{
+    display: block;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
+  .wrapper .share-icon{
+    width: 30px;
+    height: 30px;
+    background: hsl(210, 46%, 95%);
+    border-radius: 50px;
+    padding: 8px;
+    cursor: pointer;
+    z-index: 0;
+  }
+  .wrapper .sm-icon{
+    display: block;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  .wrapper .tooltip{
+    background-color: hsl(217, 19%, 35%);
+    padding: 18px 27px;
+    width: 100% ;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    top: 690px;
+    right: -20px;
+    font-size: 13px;
+    font-weight: lighter;
+    color:hsl(210, 46%, 95%);
+    letter-spacing: 2px;
+    border-radius: 10px;
+  }
+  .wrapper .tooltip::before{
+    display: none;
+    content: "";
+    background: hsl(217, 19%, 35%);
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%)rotate(45deg);
+  }
+  .share-btn{
+    width: 25px;
+    height: 25px;
+    background: hsl(214, 17%, 51%);
+    border-radius: 50px;
+    padding: 5px;
+    visibility: visible;
+    margin-left: 20px;
+  }
+  /* .second{
+    display: block;
+    height: 100%; 
+  } */
+  /* .second .new{
+    height: 330px;
+  }
+    .second .avatar{
+      display: none;
+    }
+    .second .heading-text{
+      margin-bottom: 0px;
+    }
+    .foot{
+      background: hsl(217, 19%, 35%);
+      display: flex;
+      align-items: center; 
+      bottom: -20px; */
+      /* margin-top: 30px; */
+      /* padding: 20px;
+      justify-content: space-between;
+      border-bottom-left-radius: 15px ;
+      border-bottom-right-radius: 15px;
+    }
+    .new{
+      padding: 0px;
+    }
+    .new h1{
+      padding: 30px 30px 0px 30px;
+    } 
+    .new p{
+      padding: 0px 30px 30px 30px;
+    }
+    .bottom-share{
+      display: inline-flex;
+      align-items: center;
+      color: hsl(212, 23%, 69%);
+      font-size: 12px;
+      letter-spacing: 3px;
+      font-weight: 600;
+      }
+      .bottom-share img{
+        width:20px;
+        height: 20px;
+      }
+      .bottom-share a{
+        margin-left: 10px; 
+      }
+     */
+  }
+  

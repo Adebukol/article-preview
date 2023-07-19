@@ -10,4 +10,9 @@ const shareBtn = document.getElementById("share-btn")
   }
  }
 
- onresize
+ body.onresize= function(){
+  let shareIcon = document.getElementById("share-btn")
+if(document.querySelector(".second").style.display = "none"){
+document.querySelector(".second").style.display ="block"
+}
+ }
