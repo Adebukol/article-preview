@@ -24,26 +24,25 @@ body{
   
 }
 .drawer{
-  /* width: 100%;
   max-width: 700px;
-  height: 350px; */
+  height: 350px;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
 }
 .right{
   position: absolute;
-  left: 750px;
+  left: 560px;
   box-sizing: border-box;
   background-color: #fff;
-  height: 528px;
-  width: 650px;
-  padding: 70px;
+  height: 350px;
+  width: 600px;
+  padding: 30px 50px;
   margin: 0px 50px 0px 0px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
 }
 .heading{
-  letter-spacing: 2px;
+  letter-spacing: 1.3px;
   line-height: 2.3rem;
   font-size: 28px;
   margin-bottom: 20px;
@@ -52,7 +51,7 @@ body{
 .heading-text{
   line-height: 1.8rem;
   font-size: 16px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   color:hsl(212, 23%, 69%);
   margin-right: 50px;
 }
@@ -158,14 +157,15 @@ z-index: 2;
 
 @media screen and (max-width: 700px) {
   .container{
+    margin: 0px;
     display: flex;
     flex-direction: column;
     max-width:100%;
     height: 100%;
-    margin: 50px 20px 50px 20px;
+    padding: 50px 20px 50px 20px;
   }
   .drawer{
-    margin: auto 20px;
+    margin: auto 0px;
     height: 100%;
     width: 100%;
     border-top-right-radius: 15px;
@@ -174,27 +174,28 @@ z-index: 2;
   .right{
     position: relative;
     left: 0;
-    bottom: 45px;
+    bottom: 40px;
     /* TRBL */
     padding: 30px 30px 0px 30px;
     width: 100%;
-    height: 400px;
+    height: 350px;
     max-width: 700px;
-    margin: auto 20px;
+    margin: auto 0px;
     border-top-right-radius: 0px;
     border-bottom-left-radius: 15px;
   }
   .heading{
-    padding: 0px 10px 0px 10px;
+    /* padding: 0px 10px 0px 10px; */
     font-size: 16px;
     line-height: 1.5rem;
+    font-weight: 700;
   }
   .heading-text{
     margin-right: 0px;
     line-height: 1.2rem;
     font-size: 13px;
     font-weight: 700;
-    padding: 0px 10px 10px 10px;
+    /* padding: 0px 10px 10px 10px; */
   }
   .name{
     font-size: 12px;
@@ -217,12 +218,9 @@ z-index: 2;
 
   }
   .wrapper{
-    display: block;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    display: none;
   }
-  .wrapper .share-icon{
+  /* .wrapper .share-icon{
     width: 30px;
     height: 30px;
     background: hsl(210, 46%, 95%);
@@ -261,7 +259,7 @@ z-index: 2;
     bottom: -8px;
     left: 50%;
     transform: translateX(-50%)rotate(45deg);
-  }
+  } */
   .share-btn{
     width: 25px;
     height: 25px;
@@ -274,6 +272,12 @@ z-index: 2;
 
   .mobile{
     display: block;
+    width: 50px;
+    height: 50px;
+    background: hsl(210, 46%, 95%);
+    border-radius: 50px;
+    padding: 15px;
+    cursor: pointer;
   }
   .desktop{
     display: none;
@@ -281,7 +285,7 @@ z-index: 2;
   .container .second{
     max-width:100%;
     height: 100%;
-    margin: 50px 20px 50px 20px;
+    padding: 50px 20px 50px 20px;
 
   }
   .second{
@@ -290,18 +294,26 @@ z-index: 2;
   }
   .second .new{
     height: 330px;
+    padding: 30px 30px 0px 30px;
   }
     .second .avatar{
       display: none;
     }
+    .second .heading{
+      padding: 0px;
+    }
     .second .heading-text{
       margin-bottom: 0px;
+      padding: 0px;
     }
     .foot{
+      position: relative;
+      bottom: 100px;
+      width: 100%;
       background: hsl(217, 19%, 35%);
       display: flex;
       align-items: center; 
-      bottom: -20px;
+      /* bottom: -20px; */
       /* margin-top: 30px; */
       padding: 20px;
       justify-content: space-between;
